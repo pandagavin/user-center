@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速入门Python | 中芯超算</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/user-center/img/favicon.ico">
+    <meta name="description" content="中芯超算 | 用户中心">
+    <meta name="keywords" content="中芯，计算, super computer, HPC,超算,软件,技术博客,高性能计算,技术文档,学习,用户手册,Node,git,github,markdown">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/user-center/assets/css/0.styles.fd408c1d.css" as="style"><link rel="preload" href="/user-center/assets/js/app.7b22a9fc.js" as="script"><link rel="preload" href="/user-center/assets/js/2.f6aa4a05.js" as="script"><link rel="preload" href="/user-center/assets/js/11.e3834f11.js" as="script"><link rel="prefetch" href="/user-center/assets/js/10.4240ae70.js"><link rel="prefetch" href="/user-center/assets/js/12.1228bc32.js"><link rel="prefetch" href="/user-center/assets/js/13.ba481c48.js"><link rel="prefetch" href="/user-center/assets/js/3.cfef9059.js"><link rel="prefetch" href="/user-center/assets/js/4.8e727303.js"><link rel="prefetch" href="/user-center/assets/js/5.9658f818.js"><link rel="prefetch" href="/user-center/assets/js/6.fb7b10cb.js"><link rel="prefetch" href="/user-center/assets/js/7.29ca4f21.js"><link rel="prefetch" href="/user-center/assets/js/8.c177fa5a.js"><link rel="prefetch" href="/user-center/assets/js/9.893caa8f.js">
+    <link rel="stylesheet" href="/user-center/assets/css/0.styles.fd408c1d.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/user-center/" class="home-link router-link-active"><img src="/user-center/img/avatar.jpg" alt="中芯超算" class="logo"> <span class="site-name can-hide">中芯超算</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/user-center/" class="nav-link">首页</a></div><div class="nav-item"><a href="/user-center/get-started/wrf/" class="nav-link">快速入门</a></div><div class="nav-item"><a href="/user-center/manual/system/" class="nav-link">用户手册</a></div><div class="nav-item"><a href="/user-center/support/" class="nav-link">用户支持</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/user-center/" class="nav-link">首页</a></div><div class="nav-item"><a href="/user-center/get-started/wrf/" class="nav-link">快速入门</a></div><div class="nav-item"><a href="/user-center/manual/system/" class="nav-link">用户手册</a></div><div class="nav-item"><a href="/user-center/support/" class="nav-link">用户支持</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/user-center/get-started/wrf/" class="sidebar-link">快速入门WRF</a></li><li><a href="/user-center/get-started/python/" aria-current="page" class="active sidebar-link">快速入门Python</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#快速入门教程python" class="sidebar-link">快速入门教程python</a></li><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#_1-python环境" class="sidebar-link">1. python环境</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#_1-1-系统上安装的-python" class="sidebar-link">1.1 系统上安装的 python</a></li><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#_1-2-共享目录下安装的-python" class="sidebar-link">1.2 共享目录下安装的 python</a></li></ul></li><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#_2-安装扩展包" class="sidebar-link">2. 安装扩展包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#_2-1-使用pip安装扩展包" class="sidebar-link">2.1 使用pip安装扩展包</a></li><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#_2-2-使用conda安装" class="sidebar-link">2.2 使用conda安装</a></li></ul></li><li class="sidebar-sub-header"><a href="/user-center/get-started/python/#_3-报错记录" class="sidebar-link">3. 报错记录</a></li></ul></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/user-center/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><span data-v-1cd794fe>快速入门</span></li> <!----> <!----></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/pandagavin" target="_blank" title="作者" class="beLink" data-v-1cd794fe>pandagavin</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-07-27</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          快速入门Python
+        </h1>  <div class="theme-vdoing-content content__default"><h2 id="快速入门教程python"><a href="#快速入门教程python" class="header-anchor">#</a> 快速入门教程python</h2> <p>本系列教程介绍如何快速入门使用超算集群</p> <p>本次介绍 <code>python</code> 软件</p> <h2 id="_1-python环境"><a href="#_1-python环境" class="header-anchor">#</a> 1. python环境</h2> <h3 id="_1-1-系统上安装的-python"><a href="#_1-1-系统上安装的-python" class="header-anchor">#</a> 1.1 系统上安装的 python</h3> <p>系统路径下默认安装了 python2 和 python3 的版本，可以直接使用</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ <span class="token function">which</span> python
+/usr/bin/python
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ python
+Python <span class="token number">2.7</span>.18 <span class="token punctuation">(</span>default, Jan <span class="token number">29</span> <span class="token number">2021</span>, <span class="token number">18</span>:19:04<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC <span class="token number">8.4</span>.1 <span class="token number">20200928</span> <span class="token punctuation">(</span>Red Hat <span class="token number">8.4</span>.1-1<span class="token punctuation">)</span><span class="token punctuation">]</span> on linux2
+Type <span class="token string">&quot;help&quot;</span>, <span class="token string">&quot;copyright&quot;</span>, <span class="token string">&quot;credits&quot;</span> or <span class="token string">&quot;license&quot;</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> 
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ <span class="token function">which</span> python3
+/usr/bin/python3
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ python3
+Python <span class="token number">3.6</span>.8 <span class="token punctuation">(</span>default, Aug <span class="token number">24</span> <span class="token number">2020</span>, <span class="token number">17</span>:57:11<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC <span class="token number">8.3</span>.1 <span class="token number">20191121</span> <span class="token punctuation">(</span>Red Hat <span class="token number">8.3</span>.1-5<span class="token punctuation">)</span><span class="token punctuation">]</span> on linux
+Type <span class="token string">&quot;help&quot;</span>, <span class="token string">&quot;copyright&quot;</span>, <span class="token string">&quot;credits&quot;</span> or <span class="token string">&quot;license&quot;</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="_1-2-共享目录下安装的-python"><a href="#_1-2-共享目录下安装的-python" class="header-anchor">#</a> 1.2 共享目录下安装的 python</h3> <p>在 <code>/work/software</code>  共享目录下，安装了常用的 python 集成环境，例如 <code>anaconda</code> 和 <code>miniconda</code> 。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># anaconda</span>
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ module av anaconda
+---------------- /work/software/modulefiles/tools ----------------
+anaconda3/py38_2021.05
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ module <span class="token function">add</span> anaconda3/py38_2021.05
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ <span class="token function">which</span> python
+/work/software/anaconda3/py38_2021.05/bin/python
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ python
+Python <span class="token number">3.8</span>.8 <span class="token punctuation">(</span>default, Apr <span class="token number">13</span> <span class="token number">2021</span>, <span class="token number">19</span>:58:26<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC <span class="token number">7.3</span>.0<span class="token punctuation">]</span> :: Anaconda, Inc. on linux
+Type <span class="token string">&quot;help&quot;</span>, <span class="token string">&quot;copyright&quot;</span>, <span class="token string">&quot;credits&quot;</span> or <span class="token string">&quot;license&quot;</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+<span class="token comment"># miniconda</span>
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ module av miniconda
+---------------- /work/software/modulefiles/tools ----------------
+miniconda3/py38_4.9.2
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ module <span class="token function">add</span> miniconda3/py38_4.9.2
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ <span class="token function">which</span> python
+/work/software/miniconda3/py38_4.9.2/bin/python
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ python
+Python <span class="token number">3.8</span>.5 <span class="token punctuation">(</span>default, Sep  <span class="token number">4</span> <span class="token number">2020</span>, 07:30:14<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>GCC <span class="token number">7.3</span>.0<span class="token punctuation">]</span> :: Anaconda, Inc. on linux
+Type <span class="token string">&quot;help&quot;</span>, <span class="token string">&quot;copyright&quot;</span>, <span class="token string">&quot;credits&quot;</span> or <span class="token string">&quot;license&quot;</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h2 id="_2-安装扩展包"><a href="#_2-安装扩展包" class="header-anchor">#</a> 2. 安装扩展包</h2> <h3 id="_2-1-使用pip安装扩展包"><a href="#_2-1-使用pip安装扩展包" class="header-anchor">#</a> 2.1 使用pip安装扩展包</h3> <h4 id="配置说明"><a href="#配置说明" class="header-anchor">#</a> 配置说明</h4> <p>由于 python 的扩展包数以万计，因此不可能提供一个 <strong>完整版</strong> 的 python 环境供用户使用。</p> <p>用户可以根据自身需求，使用系统目录下的 python 命令，或者 共享目录下的 python 命令为基础，使用 conda 或 pip 包管理工具，在用户根目录下自行安装所需要的依赖包即可。</p> <p>举例如下：</p> <p>用户需要使用 cartopy, netCDF4, wrf-python, cmaps 这4个包，就可以：</p> <p>step1 加载系统的 <code>anaconda</code> 环境</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>module <span class="token function">add</span> anaconda3/py38_2021.05
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>step2 使用 pip 命令安装所需的安装包</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>pip <span class="token function">install</span> netCDF4 --user
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><blockquote><p><code>--user</code> 参数表明，安装目录为 <code>~/.local</code> 而不是共享目录，这样用户就有安装的权限了。</p></blockquote> <p>step3 安装后直接使用即可</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>python
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="配置国内源"><a href="#配置国内源" class="header-anchor">#</a> 配置国内源</h4> <p>为了加快安装包的下载速度，我们可以选择配置国内的 python 镜像源，具体方法可以使用搜索引擎查询。</p> <p>在此给出一个写好的脚本，可以直接使用，大致流程为：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$ /work/software/env/pip.conf/copy-pip.conf.sh
+pip.conf copy script.
+    <span class="token number">1</span>. back up your ~/.pip/pip.conf to ~/.pip/pip.conf_20210727085110
+    <span class="token number">2</span>. Copy the pip.conf template to your ~/.pip/pip.conf
+
+
+Do you want to <span class="token keyword">do</span> this ? <span class="token punctuation">[</span>yes<span class="token operator">|</span>no<span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token function">yes</span>
+
+Avail Mirror <span class="token builtin class-name">:</span>
+  <span class="token number">1</span><span class="token punctuation">)</span> douban   <span class="token punctuation">(</span>speed ******<span class="token punctuation">)</span>
+  <span class="token number">2</span><span class="token punctuation">)</span> aliyun   <span class="token punctuation">(</span>speed ******<span class="token punctuation">)</span>
+  <span class="token number">3</span><span class="token punctuation">)</span> tsinghua <span class="token punctuation">(</span>speed ****<span class="token punctuation">)</span>
+  <span class="token number">4</span><span class="token punctuation">)</span> default  <span class="token punctuation">(</span>speed **<span class="token punctuation">)</span>
+
+Please input the number of mirror <span class="token function">which</span> you want to use <span class="token punctuation">(</span><span class="token number">1</span>-4<span class="token punctuation">)</span>:
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token number">1</span>
+mirror_file_name <span class="token operator">=</span> pip.conf_douban
+
+You will use <span class="token number">1</span><span class="token punctuation">)</span> mirror <span class="token builtin class-name">:</span> pip.conf_douban
+
+Finish copy, new pip.conf is <span class="token keyword">in</span> ~/.pip/pip.conf
+
+Have a good <span class="token function">time</span> <span class="token operator">!</span>
+
+<span class="token punctuation">[</span>gavin@ln0 ~<span class="token punctuation">]</span>$
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h4 id="配置环境"><a href="#配置环境" class="header-anchor">#</a> 配置环境</h4> <p>如果是安装的扩展包中，有新增的命令，或者新增的库，可能需要用户手动配置环境，命令如下：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>~/.local/bin:<span class="token environment constant">$PATH</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">LD_LIBRARY_PATH</span><span class="token operator">=</span>~/.local/lib:<span class="token variable">$LD_LIBRARY_PATH</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="安装扩展部分记录"><a href="#安装扩展部分记录" class="header-anchor">#</a> 安装扩展部分记录</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># netCDF4</span>
+<span class="token punctuation">[</span>yaoqiang71@ln0 ~<span class="token punctuation">]</span>$ pip <span class="token function">install</span> netCDF4 --user
+Looking <span class="token keyword">in</span> indexes: https://pypi.doubanio.com/simple
+Collecting netCDF4
+  Downloading https://pypi.doubanio.com/packages/31/32/fee59a72c1aab192a14e7ca755dc09aad7c4a2fef22e41853e6382d40ccc/netCDF4-1.5.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <span class="token punctuation">(</span><span class="token number">4.7</span> MB<span class="token punctuation">)</span>
+     <span class="token operator">|</span>████████████████████████████████<span class="token operator">|</span> <span class="token number">4.7</span> MB <span class="token number">4.9</span> MB/s
+Collecting cftime
+  Downloading https://pypi.doubanio.com/packages/99/6a/67fc50edf2a3258f619f19f8905a04e85f9ee5a18681101ad9f2a2c366d0/cftime-1.5.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl <span class="token punctuation">(</span><span class="token number">222</span> kB<span class="token punctuation">)</span>
+     <span class="token operator">|</span>████████████████████████████████<span class="token operator">|</span> <span class="token number">222</span> kB <span class="token number">1.2</span> MB/s
+Requirement already satisfied: numpy<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">1.9</span> <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from netCDF4<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">1.20</span>.1<span class="token punctuation">)</span>
+Installing collected packages: cftime, netCDF4
+  WARNING: The scripts nc3tonc4, nc4tonc3 and ncinfo are installed <span class="token keyword">in</span> <span class="token string">'/work/home/yaoqiang71/.local/bin'</span> <span class="token function">which</span> is not on <span class="token environment constant">PATH</span><span class="token builtin class-name">.</span>
+  Consider adding this directory to <span class="token environment constant">PATH</span> or, <span class="token keyword">if</span> you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed cftime-1.5.0 netCDF4-1.5.7
+<span class="token punctuation">[</span>yaoqiang71@ln0 ~<span class="token punctuation">]</span>$
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># cmaps</span>
+<span class="token punctuation">[</span>yaoqiang71@ln0 ~<span class="token punctuation">]</span>$ pip <span class="token function">install</span> cmaps --user
+Looking <span class="token keyword">in</span> indexes: https://pypi.doubanio.com/simple
+Collecting cmaps
+  Downloading https://pypi.doubanio.com/packages/4f/d7/26796aabb67adde2d528576d3d8cbaa8b98a22dc66f9b4a6a09741b26ef4/cmaps-1.0.4-py3-none-any.whl <span class="token punctuation">(</span><span class="token number">298</span> kB<span class="token punctuation">)</span>
+     <span class="token operator">|</span>████████████████████████████████<span class="token operator">|</span> <span class="token number">298</span> kB <span class="token number">3.4</span> MB/s
+Requirement already satisfied: numpy <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">1.20</span>.1<span class="token punctuation">)</span>
+Requirement already satisfied: matplotlib <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">3.3</span>.4<span class="token punctuation">)</span>
+Requirement already satisfied: pillow<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">6.2</span>.0 <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from matplotlib-<span class="token operator">&gt;</span>cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">8.2</span>.0<span class="token punctuation">)</span>
+Requirement already satisfied: kiwisolver<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">1.0</span>.1 <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from matplotlib-<span class="token operator">&gt;</span>cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">1.3</span>.1<span class="token punctuation">)</span>
+Requirement already satisfied: python-dateutil<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">2.1</span> <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from matplotlib-<span class="token operator">&gt;</span>cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">2.8</span>.1<span class="token punctuation">)</span>
+Requirement already satisfied: pyparsing<span class="token operator">!=</span><span class="token number">2.0</span>.4,<span class="token operator">!=</span><span class="token number">2.1</span>.2,<span class="token operator">!=</span><span class="token number">2.1</span>.6,<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">2.0</span>.3 <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from matplotlib-<span class="token operator">&gt;</span>cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">2.4</span>.7<span class="token punctuation">)</span>
+Requirement already satisfied: cycler<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">0.10</span> <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from matplotlib-<span class="token operator">&gt;</span>cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">0.10</span>.0<span class="token punctuation">)</span>
+Requirement already satisfied: six <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from cycler<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">0.10</span>-<span class="token operator">&gt;</span>matplotlib-<span class="token operator">&gt;</span>cmaps<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">1.15</span>.0<span class="token punctuation">)</span>
+Installing collected packages: cmaps
+Successfully installed cmaps-1.0.4
+<span class="token punctuation">[</span>yaoqiang71@ln0 ~<span class="token punctuation">]</span>$
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># wrf-python</span>
+<span class="token punctuation">[</span>yaoqiang71@ln0 ~<span class="token punctuation">]</span>$ pip <span class="token function">install</span> wrf-python --user
+Looking <span class="token keyword">in</span> indexes: https://pypi.doubanio.com/simple
+Collecting wrf-python
+  Downloading https://pypi.doubanio.com/packages/72/ad/e836d18cd1b06c58a2f22559700f23c45e00ca4c36c23b4ffe2a35e718c7/wrf-python-1.3.1.tar.gz <span class="token punctuation">(</span><span class="token number">1.1</span> MB<span class="token punctuation">)</span>
+     <span class="token operator">|</span>████████████████████████████████<span class="token operator">|</span> <span class="token number">1.1</span> MB <span class="token number">2.9</span> MB/s
+Requirement already satisfied: numpy<span class="token operator">&gt;</span><span class="token operator">=</span><span class="token number">1.11</span> <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from wrf-python<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">1.20</span>.1<span class="token punctuation">)</span>
+Requirement already satisfied: wrapt <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from wrf-python<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">1.12</span>.1<span class="token punctuation">)</span>
+Requirement already satisfied: setuptools <span class="token keyword">in</span> /work/software/anaconda3/py38_2021.05/lib/python3.8/site-packages <span class="token punctuation">(</span>from wrf-python<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">52.0</span>.0.post20210125<span class="token punctuation">)</span>
+Building wheels <span class="token keyword">for</span> collected packages: wrf-python
+  Building wheel <span class="token keyword">for</span> wrf-python <span class="token punctuation">(</span>setup.py<span class="token punctuation">)</span> <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+  Created wheel <span class="token keyword">for</span> wrf-python: <span class="token assign-left variable">filename</span><span class="token operator">=</span>wrf_python-1.3.1-cp38-cp38-linux_x86_64.whl <span class="token assign-left variable">size</span><span class="token operator">=</span><span class="token number">636264</span> <span class="token assign-left variable">sha256</span><span class="token operator">=</span>812710aabc1bb15f713ff039e85f04ae373a4b6d31502f4bf139a7356559a11e
+  Stored <span class="token keyword">in</span> directory: /work/home/yaoqiang71/.cache/pip/wheels/59/93/c4/0d769a9b3093de5cf435154abc6522ac43dd94f84deeb7c401
+Successfully built wrf-python
+Installing collected packages: wrf-python
+Successfully installed wrf-python-1.3.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="_2-2-使用conda安装"><a href="#_2-2-使用conda安装" class="header-anchor">#</a> 2.2 使用conda安装</h3> <h4 id="安装扩展"><a href="#安装扩展" class="header-anchor">#</a> 安装扩展</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 加载anaconda环境</span>
+module <span class="token function">add</span> anaconda3/py38_2021.05
+
+<span class="token comment"># 创建一个私有环境</span>
+<span class="token function">time</span> conda create  -p ~/.conda/envs/myenv  <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.8</span> -c conda-forge <span class="token comment"># 10m10.112s</span>
+<span class="token comment"># To activate this environment, use</span>
+<span class="token comment">#</span>
+<span class="token comment">#     $ conda activate /work/home/yaoqiang71/.conda/envs/myenv</span>
+<span class="token comment">#</span>
+<span class="token comment"># To deactivate an active environment, use</span>
+<span class="token comment">#</span>
+<span class="token comment">#     $ conda deactivate</span>
+
+
+<span class="token comment"># 加载私有环境</span>
+conda activate /work/home/yaoqiang71/.conda/envs/myenv
+
+<span class="token comment"># 安装需要的扩展包</span>
+conda <span class="token function">install</span> -c conda-forge cartopy 
+conda <span class="token function">install</span> -c conda-forge netCDF4
+conda <span class="token function">install</span> -c conda-forge wrf-python
+conda <span class="token function">install</span> -c conda-forge cmaps
+<span class="token comment">#hashlib</span>
+<span class="token comment">#multiprocessing</span>
+<span class="token comment">#os</span>
+<span class="token comment">#pickle</span>
+<span class="token comment">#sys</span>
+<span class="token comment">#datetime</span>
+<span class="token comment">#numpy</span>
+conda <span class="token function">install</span> -c conda-forge loguru
+conda <span class="token function">install</span> -c conda-forge xarray
+conda <span class="token function">install</span> -c conda-forge xesmf  <span class="token comment"># need install</span>
+conda <span class="token function">install</span> -c conda-forge area  <span class="token comment"># need install</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><blockquote><p>说明：用户要求使用 <code>-c conda-forge</code> 库</p></blockquote> <h4 id="配置国内源-2"><a href="#配置国内源-2" class="header-anchor">#</a> 配置国内源</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+ 
+<span class="token comment"># 设置搜索时显示通道地址</span>
+conda config --set show_channel_urls <span class="token function">yes</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="环境配置"><a href="#环境配置" class="header-anchor">#</a> 环境配置</h4> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># conda env</span>
+module <span class="token function">add</span> anaconda3
+<span class="token builtin class-name">source</span> activate
+conda deactivate
+conda activate /work/home/yaoqiang71/.conda/envs/myenv
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_3-报错记录"><a href="#_3-报错记录" class="header-anchor">#</a> 3. 报错记录</h2> <p>报错：</p> <p>pip安装报错</p> <p>解决：</p> <p>如果遇到安装报错，可以尝试升级 pip 命令到最新版本</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>python -m pip <span class="token function">install</span> --upgrade pip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>报错：</p> <p>CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.</p> <p>解决：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token number">1</span> 首先终端输入 <span class="token builtin class-name">source</span> activate
+<span class="token number">2</span> 然后终端输入 <span class="token builtin class-name">source</span> deactivate
+<span class="token number">3</span> 输入你要激活的虚拟环境指令 conda activate your_virtual_name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>报错：</p> <p>conda版本问题</p> <p>解决：</p> <p>升级conda</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 升级conda</span>
+conda update -n base -c defaults conda
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/user-center/get-started/wrf/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">快速入门WRF</div></a> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/user-center/get-started/wrf/" class="prev">快速入门WRF</a></span> <!----></p></div></div></div> <!----></main></div> <div class="footer"><div class="icons"><a href="mailto:pandagavin@foxmail.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/pandagavin" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2021
+    <span></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:160px;height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"></div></div>
+    <script src="/user-center/assets/js/app.7b22a9fc.js" defer></script><script src="/user-center/assets/js/2.f6aa4a05.js" defer></script><script src="/user-center/assets/js/11.e3834f11.js" defer></script>
+  </body>
+</html>
